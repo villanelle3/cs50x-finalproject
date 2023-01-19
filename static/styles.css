@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+
+/* Size for brand */
+body
+{
+    background-color: white;
+}
+:root
+{
+    --deafault-color:#0096FF;
+}
+::selection
+{
+    background-color:var(--deafault-color);
+}
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .logo
+{
+    color: white;
+}
+
+.desculpa
+{
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Audiowide', sans-serif;
+    color: red;
+    font-size: 0.9em;
+    line-height: 0.875;
+    font-weight: 400;
+    padding: 3.5px;
+}
+
+.shopee
+{
+    color:var(--deafault-color);
+}
+
+
+.container
+{
+    text-align: center;
+}
+
+.btn .btn-primary
+{
+    background-color: #F7422A;
+}
+
+svg
+{
+    width: 1rem;
+    fill: #eef1f6;
+}
+

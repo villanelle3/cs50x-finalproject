@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css?family=Audiowide');
+*
+{
+    font-family: 'Audiowide', sans-serif;
+    font-size: 0.9em;
+    line-height: 0.875;
+    font-weight: 400;
+    padding: 3.5px;
+}
+.usuario
+{
+    color: #5800FF;
+}
