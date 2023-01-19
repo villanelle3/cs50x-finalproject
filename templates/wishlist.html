@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Add to wishList
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <form action="/wishlist" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="linque" style="text-align: center;" placeholder="Dafiti product URL" type="url" id="novo-produto" required>
+        </div>
+        <button class="btn btn-primary" type="submit" style="background-color: #5800FF;">Add product to wishlist</button>
+        <p id="output" name="verificacao" style="visibility: hidden;"></p>
+    </form>
+</main>
+{% endblock %}
+
+
+
+
+
+
+

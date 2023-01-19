@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+
+<div class="container" style="display: flex;">
+    <form action="/login" method="post">
+        <h2 style="padding-bottom:5px;">Login to <span class="shopee"><strong>DFTrack</strong></span></h2>
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit" style="background-color: #0096FF;">Log In</button>
+        <div class="content">
+            <br><br>
+            <h3>New here?</h3>
+            <p>Join us and monitor the price of the <span class="shopee"><strong>Dafiti</strong></span> product you intend to buy!</p>
+            <a href="/register" class="btn btn-primary" type="submit" style="background-color: #0096FF;">Register for free</a>
+        </div>
+    </form>
+
+    <div class="imagem"><img src="static/images/main.svg" style="width: 85%;"></div>
+
+</div>
+{% endblock %}

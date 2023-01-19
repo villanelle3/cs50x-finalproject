@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+
+<h2 style="font-size: 1.5em; color:#0096FF;"><span style="color:black;">{{user}}'s</span> WishList</h2>
+<main class="container py-5 text-center">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th class="text-start">Product</th>
+                <th class="text-end"></th>
+                <th class="text-end"></th>
+                <th class="text-end"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            {% set count = {'value': 0} %}
+            {% for data in data %}
+            {% include 'include/modals.html' %}
+                <tr>
+                    <td class="text-start">{{data.titulo_produto}}</td>
+                    <td class="text-end"><button class="btn btn-outline-info" type="submit" data-toggle="modal"
+                        data-target="#mais-{{count.value}}">More Info</button></td>
+                    <td class="text-end"><a href="/att/{{data.data}}" class="btn btn-outline-dark">Edit</a></td>
+                    <td class="text-end"><a href="/remove/{{data.data}}" class="btn btn-danger">Remove</a></td>
+                </tr>
+                {% if count.update({'value': (count.value + 1)}) %} {% endif %}
+            {% endfor %}
+            </tr>
+        </tbody>
+    </table>
+</main>
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<div class="mb-3">
+    <div class="container" style="display: flex;">
+        <div class="imagem"><img src="static/images/registro.svg" style="width: 75%;"></div>
+        <form method="POST" class="form-register" style="padding-left: 50px;">
+        {{ form.hidden_tag() }}
+        <h2 class="h3 mb-3 font-weight-normal">
+            Create your <span class="shopee"><strong>DFTrack</strong></span> Account
+        </h2>
+        {{ form.username(class="form-control mx-auto w-auto", placeholder="Username", autocomplete="off") }}
+        <br>
+        {{ form.email(class="form-control mx-auto w-auto", placeholder="E-mail Address", autocomplete="off") }}
+        <br>
+        {{ form.password1(class="form-control mx-auto w-auto", placeholder="Password") }}
+        <br>
+        {{ form.password2(class="form-control mx-auto w-auto", placeholder="Confirm Password") }}
+        <br>
+        {{ form.submit(class="btn btn-primary", style="background-color: #0096FF;") }}
+
+        <div class="content">
+            <br>
+            <h3>Already a member?</h3>
+            <p>Login to <span class="shopee"><strong>DFTrack</strong></span></p>
+            <a href="/login" class="btn btn-primary" type="submit" style="background-color: #0096FF;">Login</a>
+        </div>
+    </form>
+</div>
+</div>
+{% endblock %}

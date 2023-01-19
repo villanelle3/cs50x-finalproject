@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Email Notifications
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <blockquote class="blockquote text-right">
+        <p class="mb-0">You will be notified when the product reaches a lower or equal price than expected!</p>
+    </blockquote>
+
+    <form action="/email" method="post">
+        <table class="table table-bordered">
+            <thead>
+                <tr class="table-info">
+                    <th scope="col">Product</th>
+                    <th scope="col">Expect price</th>
+                    <th scope="col">Change expect price?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                {% for produtos in produtos %}
+                    <tr>
+                        <td class="text-start">{{produtos.titulo_produto}}</td>
+                        {% for precos in precos %}
+                            {% if precos.data == produtos.data %}
+                                <td class="text-start"><strong>R$ </strong>{{precos.price}}</td>
+                            {% endif %}
+                        {% endfor %}
+                        <td scope="col">
+                            <input autocomplete="off" autofocus class="form-control mx-auto w-auto"
+                                name="{{produtos.data}}" style="text-align: center;" placeholder="Expected Price (R$)" type="number"
+                                step=".01" id="{{produtos.data}}" min="1">
+                                <button type="submit" style="background: transparent; border:none; display: inline-block;
+                                font-size: 22px;">
+                                <i class="fa fa-money" aria-hidden="true"></i>
+                            </button>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </form>
+    <button type="button" class="btn btn-success" onclick="pupup()"><a href="/foo" style="color: white;">Get Started!</a></button>
+</main>
+{% endblock %}
+
+

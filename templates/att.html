@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Update Product Name
+{% endblock %}
+
+{% block main %}
+<main class="container py-5 text-center">
+    <form action="/att/{{quem_eu_quero_atualizar}}" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" name="novo_nome" placeholder="Update Name" type="text" id="novo_nome" required>
+        </div>
+        <button class="btn btn-primary" type="submit" style="background-color: #5800FF;">Update Name</button>
+    </form>
+</main>
+{% endblock %}
+
+
+
+
+
+
+
